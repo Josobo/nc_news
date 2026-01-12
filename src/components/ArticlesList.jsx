@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getArticles } from "../api.js";
-import ArticleCard from "./components/ArticleCard";
+import ArticleCard from "./ArticleCard.jsx";
 
 function ArticlesList() {
   // Store fetched data in state

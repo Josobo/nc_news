@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleById } from "./api";
-import ArticleCard from "./components/ArticleCard";
+import { getArticleById } from "../api";
+import ArticleCard from "./ArticleCard.jsx";
+import CommentsList from "./CommentsList.jsx";
 
 function SingleArticle() {
   const { article_id } = useParams();
@@ -33,6 +34,8 @@ function SingleArticle() {
     <>
       <h2>Single Article</h2>
       <ArticleCard article={article} />
+      <p>{article.body}</p>
+      <CommentsList articleId={article_id} />
     </>
   );
 }
